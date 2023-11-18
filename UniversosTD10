@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curiosidades sobre o universo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        .centered {
+            text-align: center;
+            margin-top: 70px; /* Ajusta a margem para baixo */
+        }
+        #showFacts {
+            margin-top: 10px; /* Aumenta a margem do botão para baixo */
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body background="https://usagif.com/wp-content/uploads/gif/outerspace-6.gif">
+    <h1 class="centered">Bem vindo a Curiosidades sobre o universo</h1>
+    <p class="centered">Explore o universo fascinante que nos rodeia! Aqui estão alguns fatos curiosos para refletir:</p>
+
+    <div class="centered">
+        <button id="showFacts">Clique aqui para ver fatos aleatórios sobre o universo</button>
+    </div>
+
+    <div id="facts" class="centered hidden">
+    </div>
+
+    <script>
+        const facts = [
+            // ... (o mesmo array de fatos que você tinha antes)
+"Estrelas de Nêutrons: São estrelas extremamente densas, com massa concentrada que faria uma colher de chá delas pesar milhões de tonelada",
+
+"Supernovas: As explosões dessas estrelas liberam mais energia em segundos do que o Sol durante toda a sua vida",
+
+"Nebulosas: Essas nuvens interestelares são berçários de estrelas, algumas apresentando cores e formas impressionantes",
+
+"Zonas Habitáveis: Além do Sistema Solar, cientistas descobriram exoplanetas que podem ter condições favoráveis para a existência de água líquida, essencial para a vida",
+
+"Pulsares: Estrelas de nêutrons que emitem pulsos regulares de radiação eletromagnética, semelhante a um farol cósmico.",
+
+"Colisões de Galáxias: Galáxias às vezes colidem, mas as estrelas raramente se chocam devido ao vasto espaço entre elas",
+
+"Buracos de Minhoca: Teoricamente, poderiam ser atalhos no espaço-tempo, permitindo viagens intergalácticas",
+
+"Constante Cosmológica: Uma ideia proposta por Einstein que descreve uma energia que preenche o espaço vazio, causando a expansão acelerada do universo",
+
+"Elementos no Universo: Muitos elementos, como carbono e oxigênio, são criados em estrelas e liberados no espaço quando elas morrem",
+
+"Poeira Cósmica: Partículas microscópicas no espaço que criam reflexões de luz, vistas como manchas escuras em regiões das galáxias",
+
+"Via Láctea: Nossa galáxia tem bilhões de estrelas e provavelmente bilhões de planetas, mas ainda é apenas uma entre inúmeras galáxias",
+
+"Radiação Cósmica de Fundo: É um eco do Big Bang, a radiação mais antiga do universo, presente em todo o espaço",
+
+"Buracos Negros Supermassivos: Existem buracos negros gigantes no centro de muitas galáxias, incluindo a nossa própria Via Láctea",
+
+"Magnetars: Estrelas de nêutrons com campos magnéticos extremamente poderosos, capazes de deformar a estrutura das moléculas",
+
+"Materiais Exóticos: Além da matéria comum, o universo pode conter matéria escura e energia escura, ambas ainda sendo mistérios para os cientistas",
+        ];
+
+        document.getElementById('showFacts').addEventListener('click', function() {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById('facts').innerHTML = randomFact;
+            document.getElementById('facts').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
